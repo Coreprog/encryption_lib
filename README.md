@@ -1,5 +1,6 @@
 # encryption_lib
-A library for diffrent kind of encoding and decoding of data.
+A library with different method to encode and decode data.
+
 
 ## Caesar Cipher
 It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 

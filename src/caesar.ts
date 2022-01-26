@@ -3,7 +3,7 @@ export class Caesar{
     private static um = ['Ä','ä','Ö','ö','Ü','ü','ß'];
     private static bum = ['AE','UE','OE','ae','oe','ue'];
 
-    public static CasaerEncoding(text:string,key:number) {
+    public static CaesarEncoding(text:string,key:number) {
         for (let i = 0; i < this.um.length; i++) {
             if (text.includes(this.um[i])){
                 text= text.replace('Ä','AE');
@@ -41,7 +41,7 @@ export class Caesar{
     }
 
 
-    public static CasaerDecoding(text:string,key:number) {
+    public static CaesarDecoding(text:string,key:number) {
         let result = ''
         key = key % 26
         for (let i = 0; i < text.length; i++) {

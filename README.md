@@ -1,4 +1,4 @@
-# encryption_lib
+# encryption_lib for Deno
 A library with different method to encode and decode data.
 
 

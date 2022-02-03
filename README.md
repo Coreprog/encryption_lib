@@ -6,11 +6,10 @@ A library with different methods to encode and decode data.
 It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 
 (https://en.wikipedia.org/wiki/Caesar_cipher)
 
-###Caesar.CaesarEncoding(txt,key)
-Example:
-Caesar.CaesarEncoding("Hello World!",5) --> "Mjqqt Btwqi!"
+>Caesar.CaesarEncoding(txt,key)
+>Example:
+>Caesar.CaesarEncoding("Hello World!",5) --> "Mjqqt Btwqi!"
 
-
-###Caesar.CaesarDecoding(txt,key)
-Example:
-Caesar.CaesarDecoding("Mjqqt Btwqi!",5) --> "Hello World!"
+>Caesar.CaesarDecoding(txt,key)
+>Example:
+>Caesar.CaesarDecoding("Mjqqt Btwqi!",5) --> "Hello World!"

@@ -13,3 +13,6 @@ It is a type of substitution cipher in which each letter in the plaintext is rep
 >Caesar.CaesarDecoding(txt,key)
 >Example:
 >Caesar.CaesarDecoding("Mjqqt Btwqi!",5) --> "Hello World!"
+
+## RSA
+Workng on it, isnt working at the moment. Feel free to submit pull requests!

@@ -13,8 +13,6 @@ export class RSA{
             q = getPrime(min, max);
         }
 
-        console.log(p,q)
-
         let N = q*p;
         let phi = (q-1)*(p-1);
         var e=0;
@@ -23,7 +21,6 @@ export class RSA{
         for (let i = 2; i>0; i++) {
             if (getHighestCommonDenominator(i,phi)==1){
                 e += i;
-                console.log(e,"1")
                 break
             }
         }
@@ -39,7 +36,6 @@ export class RSA{
                 if(i==e){
                 }else{
                 d += i;
-                console.log(d,"2")
                 break
             }
             }

@@ -5,7 +5,7 @@ A library with different methods to encode and decode data.
 ### Caesar Cipher 
 
 ```ts
-import { Caesar } from "https://deno.land/x/encryption_lib@0.1.0/src/caesar.ts"
+import { Caesar } from "https://deno.land/x/encryption_lib@0.1.1/mod.ts"
 
 const caesar_enc_text = "Hello World!"
 const cipher = 5
@@ -23,7 +23,7 @@ console.log(caesar_decoded) // "Hello World!"
 
 ### RSA  
 ```ts
-import { RSA } from "https://deno.land/x/encryption_lib@0.1.0/src/rsa.ts"
+import { RSA } from "https://deno.land/x/encryption_lib@0.1.1/mod.ts"
 
 // RSA.KeyGenrerator
 const rsa_keys = RSA.KeyGenrerator()

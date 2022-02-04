@@ -3,7 +3,8 @@
 
 
 
-import { getHighestCommonDenominator } from "https://deno.land/x/gethighestcommondenominator/mod.ts"
+import { getHighestCommonDenominator } from "https://deno.land/x/gethighestcommondenominator/mod.ts" 
+import { encrypt, decrypt } from "./primenumber.js"
 import {getPrime} from "./primenumber.js"
 
 export class RSA{
@@ -22,7 +23,7 @@ export class RSA{
         var e=0;
         var d=0;
         var b=0;
-        for (let i = phi; i>0; i--) {
+        for (let i = 2; i>0; i++) {
             if (getHighestCommonDenominator(i,phi)==1){
                 e += i;
                 console.log(e,"1")
@@ -54,33 +55,13 @@ export class RSA{
 }
 
     public static Encrypt(text:string,key:any){
-        let textnum = [];
-        let k1= key[0];
-        let k2= key[1];
-
-        for (let i = 0; i < text.length; i++) {
-            var e = text[i].charCodeAt(0)
-            console.log(e)
-            var en = (e**k1)%k2
-            textnum.push(en)
-        }
-        return textnum
-
-
+        let result = encrypt(text,key)
+        return result
     }
     
     public static Decrypt(text:any,key:any) {
-        let textde = "";
-        let k1= key[0];
-        let k2= key[1];
-
-        for (let i = 0; i < text.length; i++) {
-            let dn = (text[i]**k1)%k2;
-            console.log(dn)
-            textde += String.fromCharCode(dn);
-        }
-        return textde
-        
+        let result = decrypt(text,key)
+        return result
     }
 
 

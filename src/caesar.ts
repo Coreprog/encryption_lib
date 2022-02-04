@@ -1,18 +1,10 @@
 
-import { getHighestCommonDenominator } from "https://deno.land/x/gethighestcommondenominator/mod.ts"
+import { encrypt, decrypt } from "./primenumber.js"
 
 export class Caesar{
     private static um = ['Ä','ä','Ö','ö','Ü','ü','ß'];
     private static bum = ['AE','UE','OE','ae','oe','ue'];
     
-    public static tester() {
-        let k = (66**5)%133
-        let t = (k**65)%133
-        let k2 = (5**5)%133
-        let t2 = (k2**65)%133
-        return [k,t,k2,t2]
-    }
-
     public static CaesarEncoding(text:string,key:number) {
         for (let i = 0; i < this.um.length; i++) {
             if (text.includes(this.um[i])){

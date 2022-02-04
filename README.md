@@ -41,5 +41,5 @@ const rsa_private_key = [763,1219]
 
 //RSA.Decoding
 const rsa_decoded = RSA.Decoding(rsa_dec_list,rsa_private_key)
-console.log(rsa_encoded) // "Hello World"
+console.log(rsa_decoded) // "Hello World"
 ```

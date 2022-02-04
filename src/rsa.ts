@@ -1,15 +1,12 @@
-// NOT READY FOR USAGE
-
-
-
-
 import { getHighestCommonDenominator } from "https://deno.land/x/gethighestcommondenominator/mod.ts" 
-import { encrypt, decrypt } from "./primenumber.js"
+import { encoding, decoding } from "./primenumber.js"
 import {getPrime} from "./primenumber.js"
 
 export class RSA{
 
-    public static KeyGenrerator(min:number,max:number) {
+    public static KeyGenrerator() {
+        let min = 10;
+        let max = 100;
         let p = getPrime(min, max);
         let q = getPrime(min, max);
         while(q==p){
@@ -33,10 +30,8 @@ export class RSA{
 
         if(q<p){
             b += p;
-            console.log(b)
         }else{
             b += q;
-            console.log(b)
         }
 
         for (let i = 2; i < b**10; i++) {
@@ -54,13 +49,13 @@ export class RSA{
         return [pubkey,prikey]
 }
 
-    public static Encrypt(text:string,key:any){
-        let result = encrypt(text,key)
+    public static Encoding(text:string,key:any){
+        let result = encoding(text,key)
         return result
     }
     
-    public static Decrypt(text:any,key:any) {
-        let result = decrypt(text,key)
+    public static Decoding(text:any,key:any) {
+        let result = decoding(text,key)
         return result
     }
 

@@ -15,4 +15,20 @@ Example:
 >Caesar.CaesarDecoding("Mjqqt Btwqi!",5) --> "Hello World!"  
 
 ## RSA
-Currently working on it, isnt working at the moment. Feel free to submit pull requests!
+RSA public-key / private-key cryptosystem. On base of two prime numbers (at the moment)...
+
+### RSA.KeyGenrerator()  
+first array is the public key  
+second array is the private key  
+
+Example:  
+> RSA.KeyGenrerator() --> [[3,1219],[763,1219]]  
+
+### RSA.Encoding(text,public key)  
+Example:
+> RSA.Encoding("Hello World",[3,1219]) --> [234,246,485,485,1132,1074,243,1132,459,485,420]  
+
+### RSA.Decoding(list,private key)  
+Example:  
+> RSA.Decoding([234,246,485,485,1132,1074,243,1132,459,485,420],[763,1219]) --> "Hello World"
+

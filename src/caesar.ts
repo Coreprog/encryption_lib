@@ -1,6 +1,3 @@
-
-import { encrypt, decrypt } from "./primenumber.js"
-
 export class Caesar{
     private static um = ['Ä','ä','Ö','ö','Ü','ü','ß'];
     private static bum = ['AE','UE','OE','ae','oe','ue'];

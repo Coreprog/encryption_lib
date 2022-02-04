@@ -17,18 +17,18 @@ Deno.test("Caesar Decoding", () => {
 
 // RSA 
 Deno.test("RSA", () => {
- const result = RSA.KeyGenrerator(5,10)
+ const result = RSA.KeyGenrerator()
   assertEquals("Will fail, because keys are random generated", result);
 });
 
 Deno.test("RSA ENC", () => {
-  const result = RSA.Encrypt("B",[5,91])
-   assertEquals([40], result);
+  const result = RSA.Encoding("Hello World",[3,1219])
+   assertEquals([234,246,485,485,1132,1074,243,1132,459,485,420], result);
  });
 
  Deno.test("RSA DEC", () => {
-  const result = RSA.Decrypt([40],[29,91])
-   assertEquals("B", result);
+  const result = RSA.Decoding([234,246,485,485,1132,1074,243,1132,459,485,420],[763,1219])
+   assertEquals("Hello World", result);
  });
 
  //Tester for typescript and javascript test runs

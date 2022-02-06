@@ -1,5 +1,5 @@
 import { getHighestCommonDenominator } from "https://deno.land/x/gethighestcommondenominator/mod.ts" 
-import { encoding, decoding } from "./primenumber.js"
+import { encoding, decoding } from "./js_rsa.js"
 import {getPrime} from "./primenumber.js"
 
 export class RSA{

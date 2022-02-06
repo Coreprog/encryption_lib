@@ -4,7 +4,7 @@ import {getPrime} from "./primenumber.js"
 
 export class RSA{
 
-    public static KeyGenrerator() {
+    public static KeyGenerator() {
         let min = 10;
         let max = 100;
         let p = getPrime(min, max);

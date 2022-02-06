@@ -25,8 +25,8 @@ console.log(caesar_decoded) // "Hello World!"
 ```ts
 import { RSA } from "https://deno.land/x/encryption_lib@0.1.1/mod.ts"
 
-// RSA.KeyGenrerator
-const rsa_keys = RSA.KeyGenrerator()
+// RSA.KeyGenrerator (generates a random public and private keypair)
+const rsa_keys = RSA.KeyGenerator()
 console.log(rsa_keys) // [[3,1219],[763,1219]]
 
 const rsa_enc_text = "Hello World"

@@ -17,7 +17,7 @@ Deno.test("Caesar Decoding", () => {
 
 // RSA 
 Deno.test("RSA", () => {
- const result = RSA.KeyGenrerator()
+ const result = RSA.KeyGenerator()
   assertEquals("Will fail, because keys are random generated", result);
 });
 
